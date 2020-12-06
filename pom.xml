@@ -21,17 +21,22 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-				</configuration>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>3.3.5</version>
+			    <extensions>true</extensions>
+			    <configuration>
+			        <cloudHubDeployment>
+			            <uri>https://anypoint.mulesoft.com</uri>
+			            <muleVersion>4.3.0</muleVersion>
+			            <username>yuyi2583</username>
+			            <password>1q2w3e4rasdfZXCV</password>
+			            <applicationName>mulesoft-jenkins-ci-cd</applicationName>
+			            <environment>Sandbox</environment>
+			            <workerType>MICRO</workerType>
+			            <objectStoreV2>true</objectStoreV2>
+			        </cloudHubDeployment>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
