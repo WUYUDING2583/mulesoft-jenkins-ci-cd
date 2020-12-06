@@ -31,24 +31,26 @@
 	<build>
 		<plugins>
 			<plugin>
-			    <groupId>org.mule.tools.maven</groupId>
-			    <artifactId>mule-maven-plugin</artifactId>
-			    <version>3.3.5</version>
-			    <extensions>true</extensions>
-			    <configuration>
-				   <cloudHubDeployment>
-				      <uri>${anypoint.uri}</uri>
-				      <muleVersion>${muleVersion}</muleVersion>
-				      <username>${username}</username>
-				      <password>${password}</password>
-				      <applicationName>${applicationName}</applicationName>
-				      <environment>${environment}</environment>
-				      <region>${region}</region>
-				      <workers>${workers}</workers>
-				      <workerType>${workerType}</workerType>
-				   </cloudHubDeployment>
-				</configuration>
-			    
+			  <groupId>org.mule.tools.maven</groupId>
+			  <artifactId>mule-maven-plugin</artifactId>
+			  <version>3.4.2</version>
+			  <extensions>true</extensions>
+			  <configuration>
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>${app.runtime}</muleVersion>
+			      <username>${username}</username>
+			      <password>${password}</password>
+			      <applicationName>${cloudhub.application.name}</applicationName>
+			      <environment>${environment}</environment>
+			      <region>${region}</region>
+			      <workers>${workers}</workers>
+			      <workerType>${workerType}</workerType>
+			      <properties>
+			        <key>value</key>
+			      </properties>
+			    </cloudHubDeployment>
+			  </configuration>
 			</plugin>
 		</plugins>
 	</build>
