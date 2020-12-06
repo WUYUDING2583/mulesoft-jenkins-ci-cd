@@ -18,8 +18,8 @@
 	   <deploymentType>cloudhub</deploymentType>
 	   <muleVersion>4.2.1</muleVersion>
 	   <redeploy>true</redeploy>
-	   <username>wu_yuding</username>
-	   <password>Family123@foxmail.com</password>
+	   <username>yuyi2583</username>
+	   <password>1q2w3e4rasdfZXCV</password>
 	   <applicationName>mulesoft-jenkins-ci-cd</applicationName>
 	   <environment>Sandbox</environment>
 	   <region>us-east-1</region>
