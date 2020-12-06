@@ -12,10 +12,20 @@
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+	   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.3.0-20201013</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+	   <deploymentType>cloudhub</deploymentType>
+	   <muleVersion>4.2.1</muleVersion>
+	   <redeploy>true</redeploy>
+	   <username>wu_yuding</username>
+	   <password>Family123@foxmail.com</password>
+	   <applicationName>mulesoft-jenkins-ci-cd</applicationName>
+	   <environment>Sandbox</environment>
+	   <region>us-east-1</region>
+	   <workers>1</workers>
+	   <workerType>Micro</workerType>
+	   <anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
 	</properties>
 
 	<build>
@@ -26,17 +36,19 @@
 			    <version>3.3.5</version>
 			    <extensions>true</extensions>
 			    <configuration>
-			        <cloudHubDeployment>
-			            <uri>https://anypoint.mulesoft.com</uri>
-			            <muleVersion>4.2.2</muleVersion>
-			            <username>yuyi2583</username>
-			            <password>1q2w3e4rasdfZXCV</password>
-			            <applicationName>mulesoft-jenkins-ci-cd</applicationName>
-			            <environment>Sandbox</environment>
-			            <workerType>MICRO</workerType>
-			            <objectStoreV2>true</objectStoreV2>
-			        </cloudHubDeployment>
-			    </configuration>
+				   <cloudHubDeployment>
+				      <uri>${anypoint.uri}</uri>
+				      <muleVersion>${muleVersion}</muleVersion>
+				      <username>${username}</username>
+				      <password>${password}</password>
+				      <applicationName>${applicationName}</applicationName>
+				      <environment>${environment}</environment>
+				      <region>${region}</region>
+				      <workers>${workers}</workers>
+				      <workerType>${workerType}</workerType>
+				   </cloudHubDeployment>
+				</configuration>
+			    
 			</plugin>
 		</plugins>
 	</build>
